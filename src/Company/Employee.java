@@ -3,9 +3,9 @@ package Company;
 import java.util.Objects;
 
 public class Employee {
-    int id ;
-    String firstname  ;
-    String lastname   ;
+   private int id ;
+    private String firstname  ;
+    private String lastname   ;
 
     public Employee(int id, String firstname, String lastname) {
         this.id = id;
