@@ -13,7 +13,7 @@ public class Main {
         //par=par.replaceAll("[.,?-]","");
 
         String[] words = par.toLowerCase().split(" ");
-        Map<String, Integer> mappedWords = new HashMap<>();
+        Map<String, Integer> mappedWords = new LinkedHashMap<>();
 
         for (String word : words) {
             if (mappedWords.containsKey(word)) {
