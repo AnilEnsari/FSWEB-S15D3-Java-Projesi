@@ -1,8 +1,8 @@
 package FindAllWords;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import Company.Employee;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,9 +12,21 @@ public class Main {
                 " Almost of year of stalemate without much fighting followed, during which Greek moral and discipline faltered while Turkish strength increased." + " French and Italian forces evacuated from Anatolia. The Allies offered an armistice to the Turks, which Mustafa Kemal refused.";
         //par=par.replaceAll("[.,?-]","");
 
-
         String[] words = par.toLowerCase().split(" ");
-        List<String> wordList = new ArrayList<>(Arrays.asList(words));
+        Map<String, Integer> mappedWords = new HashMap<>();
 
+        for (String word : words) {
+            if (mappedWords.containsKey(word)) {
+
+
+                mappedWords.put(word, mappedWords.get(word) +1);
+            }
+            else {
+                mappedWords.put(word, 1);
+
+            }
+
+        }
+        System.out.println(mappedWords);
     }
 }
